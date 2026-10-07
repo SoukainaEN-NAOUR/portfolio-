@@ -4,124 +4,149 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soukaina EN-NAOUR | Portfolio Développeuse Full Stack</title>
-    <script src="https://tailwindcss.com"></script>
+    <!-- Chargement de Bootstrap 5 -->
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; color: #333333; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .hero-section { padding: 100px 0; background: #ffffff; text-align: center; border-bottom: 1px solid #dee2e6; }
+        .navbar-brand { font-weight: bold; color: #4f46e5 !important; }
+        .text-indigo { color: #4f46e5 !important; }
+        .btn-indigo { background-color: #4f46e5; color: white; border: none; }
+        .btn-indigo:hover { background-color: #4338ca; color: white; }
+        .card-project { border: 1px solid #e5e7eb; border-radius: 12px; background: white; transition: transform 0.2s; height: 100%; display: flex; flex-direction: column; justify-content: space-between; }
+        .card-project:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .badge-tech { background-color: #f3f4f6; color: #4b5563; font-size: 0.75rem; font-weight: 500; margin-right: 5px; padding: 5px 10px; border-radius: 20px; }
+        .footer { background-color: #111827; color: #9ca3af; padding: 30px 0; text-align: center; font-size: 0.9rem; }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+<body>
 
     <!-- Header / Navigation -->
-    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur shadow-sm">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <span class="text-xl font-bold text-indigo-600">SE.</span>
-            <nav class="space-x-6 font-medium">
-                <a href="#about" class="hover:text-indigo-600 transition">À propos</a>
-                <a href="#skills" class="hover:text-indigo-600 transition">Compétences</a>
-                <a href="#projects" class="hover:text-indigo-600 transition">Projets</a>
-                <a href="#contact" class="hover:text-indigo-600 transition">Contact</a>
-            </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">SE.</a>
+            <div class="navbar-nav ms-auto flex-row gap-3">
+                <a class="nav-link px-2" href="#about">À propos</a>
+                <a class="nav-link px-2" href="#skills">Compétences</a>
+                <a class="nav-link px-2" href="#projects">Projets</a>
+                <a class="nav-link px-2" href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="container max-w-xl">
+            <h1 class="display-4 fw-bold text-dark mb-2">Soukaina EN-NAOUR</h1>
+            <p class="h3 text-indigo fw-semibold mb-4">Développeuse Web Full Stack Laravel & PHP</p>
+            <p class="lead text-muted mx-auto mb-5" style="max-width: 650px;">
+                Passionnée par le développement backend, la conception d'API RESTful et l'architecture de bases de données solides. En recherche active d'un stage de fin d'études (PFE).
+            </p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#projects" class="btn btn-indigo btn-lg px-4 py-2">Voir mes projets</a>
+                <a href="https://linkedin.com" target="_blank" class="btn btn-outline-secondary btn-lg px-4 py-2">LinkedIn</a>
+            </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="max-w-4xl mx-auto px-4 py-20 text-center">
-        <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight mb-4">
-            Soukaina EN-NAOUR
-        </h1>
-        <p class="text-xl md:text-2xl text-indigo-600 font-semibold mb-6">
-            Développeuse Web Full Stack Laravel & PHP
-        </p>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-            Passionnée par le développement backend, la conception d'API RESTful et l'architecture de bases de données solides. En recherche active d'un stage de fin d'études (PFE).
-        </p>
-        <div class="flex justify-center space-x-4">
-            <a href="#projects" class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-medium shadow hover:bg-indigo-700 transition">Voir mes projets</a>
-            <a href="https://www.linkedin.com/in/soukaina-en-naour-72b256223/" target="_blank" class="border border-gray-300 bg-white text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 transition">LinkedIn</a>
-        </div>
-    </section>
-
-    <!-- À propos (About) -->
-    <section id="about" class="bg-white py-16 border-t border-b border-gray-100">
-        <div class="max-w-4xl mx-auto px-4">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">À propos de moi</h2>
-            <p class="text-lg text-gray-600 leading-relaxed text-center">
+    <!-- À propos -->
+    <section id="about" class="py-5 bg-white border-bottom">
+        <div class="container text-center max-w-lg" style="max-width: 800px;">
+            <h2 class="fw-bold text-dark mb-4">À propos de moi</h2>
+            <p class="lead text-muted lh-lg">
                 Actuellement en formation intensive au Centre de codage Fquih Ben Salah (CCFBS) avec Simplon Maghreb, je me spécialise dans la création d'applications web robustes et scalables. Forte d'un premier parcours en Gestion des Entreprises à l'ISTA, j'associe mes compétences analytiques à ma passion pour le code afin de concevoir des solutions backend performantes.
             </p>
         </div>
     </section>
 
-    <!-- Compétences (Skills) -->
-    <section id="skills" class="max-w-5xl mx-auto px-4 py-16">
-        <h2 class="text-2xl font-bold text-gray-900 mb-10 text-center">Mes Compétences</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 class="text-lg font-bold text-indigo-600 mb-4">Back-end</h3>
-                <p class="text-gray-600">PHP 8, Laravel 12, Laravel Sanctum, Eloquent ORM, API RESTful, PHPUnit</p>
+    <!-- Compétences -->
+    <section id="skills" class="container py-5">
+        <h2 class="fw-bold text-dark text-center mb-5">Mes Compétences</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="p-4 bg-white rounded shadow-sm border h-100">
+                    <h3 class="h5 fw-bold text-indigo mb-3">Back-end</h3>
+                    <p class="text-muted">PHP 8, Laravel 12, Laravel Sanctum, Eloquent ORM, API RESTful, PHPUnit</p>
+                </div>
             </div>
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 class="text-lg font-bold text-indigo-600 mb-4">Front-end</h3>
-                <p class="text-gray-600">JavaScript (ES6+), HTML5, CSS3, Tailwind CSS, Bootstrap 5, Blade</p>
+            <div class="col-md-4">
+                <div class="p-4 bg-white rounded shadow-sm border h-100">
+                    <h3 class="h5 fw-bold text-indigo mb-3">Front-end</h3>
+                    <p class="text-muted">JavaScript (ES6+), HTML5, CSS3, Tailwind CSS, Bootstrap 5, Blade</p>
+                </div>
             </div>
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                <h3 class="text-lg font-bold text-indigo-600 mb-4">DevOps & Gestion</h3>
-                <p class="text-gray-600">Docker, Docker Compose, Git, GitHub, Nginx, Postman, Jira (Méthodologies Agiles)</p>
+            <div class="col-md-4">
+                <div class="p-4 bg-white rounded shadow-sm border h-100">
+                    <h3 class="h5 fw-bold text-indigo mb-3">DevOps & Gestion</h3>
+                    <p class="text-muted">Docker, Docker Compose, Git, GitHub, Nginx, Postman, Jira (Méthodologies Agiles)</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Projets (Projects Showcase) -->
-    <section id="projects" class="bg-gray-100 py-16">
-        <div class="max-w-5xl mx-auto px-4">
-            <h2 class="text-2xl font-bold text-gray-900 mb-10 text-center">Projets Phares</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <!-- Projets -->
+    <section id="projects" class="bg-light py-5 border-top border-bottom">
+        <div class="container">
+            <h2 class="fw-bold text-dark text-center mb-5">Projets Phares</h2>
+            <div class="row g-4">
                 
                 <!-- Projet 1 -->
-                <div class="bg-white rounded-xl shadow-sm overflow-hidden flex flex-col justify-between">
-                    <div class="p-6">
-                        <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 bg-indigo-50 px-2 py-1 rounded">Projet Fil Rouge</span>
-                        <h3 class="text-xl font-bold text-gray-900 mt-2 mb-3">MarocTalent</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">Plateforme intelligente de recrutement. Gestion complète des candidats, entreprises, offres et candidatures avec un système de matching basé sur l'IA.</p>
-                    </div>
-                    <div class="px-6 pb-6 pt-2 border-t border-gray-50 flex justify-between items-center bg-gray-50/50">
-                        <span class="text-xs font-medium text-gray-500">Laravel • Docker • MySQL</span>
-                        <a href="https://github.com" target="_blank" class="text-sm font-semibold text-indigo-600 hover:text-indigo-800 transition">GitHub &rarr;</a>
+                <div class="col-md-6">
+                    <div class="card-project p-4">
+                        <div>
+                            <span class="badge btn-indigo mb-2">Projet Fil Rouge</span>
+                            <h3 class="h4 fw-bold text-dark mb-3">MarocTalent</h3>
+                            <p class="text-muted small lh-base">Plateforme intelligente de recrutement. Gestion complète des candidats, entreprises, offres et candidatures avec un système de matching basé sur l'IA.</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-top d-flex justify-content-between align-items-center">
+                            <span class="text-muted small">Laravel • Docker • MySQL</span>
+                            <a href="https://github.com" target="_blank" class="text-indigo fw-bold text-decoration-none">GitHub &rarr;</a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Projet 2 -->
-                <div class="bg-white rounded-xl shadow-sm overflow-hidden flex flex-col justify-between">
-                    <div class="p-6">
-                        <span class="text-xs font-bold uppercase tracking-wider text-green-600 bg-green-50 px-2 py-1 rounded">API REST</span>
-                        <h3 class="text-xl font-bold text-gray-900 mt-2 mb-3">DevJobs API</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">API sécurisée pour une plateforme de recrutement Tech. Contrôle strict des accès par rôles (Middleware personnalisé) et authentification par jetons avec Sanctum.</p>
-                    </div>
-                    <div class="px-6 pb-6 pt-2 border-t border-gray-50 flex justify-between items-center bg-gray-50/50">
-                        <span class="text-xs font-medium text-gray-500">Sanctum • REST API • Postman</span>
-                        <a href="https://github.com/DevJobs-API-" target="_blank" class="text-sm font-semibold text-indigo-600 hover:text-indigo-800 transition">GitHub &rarr;</a>
+                <div class="col-md-6">
+                    <div class="card-project p-4">
+                        <div>
+                            <span class="badge bg-success mb-2">API REST</span>
+                            <h3 class="h4 fw-bold text-dark mb-3">DevJobs API</h3>
+                            <p class="text-muted small lh-base">API sécurisée pour une plateforme de recrutement Tech. Contrôle strict des accès par rôles (Middleware personnalisé) et authentification par jetons avec Sanctum.</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-top d-flex justify-content-between align-items-center">
+                            <span class="text-muted small">Sanctum • REST API • Postman</span>
+                            <a href="https://github.com/DevJobs-API-" target="_blank" class="text-indigo fw-bold text-decoration-none">GitHub &rarr;</a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Projet 3 -->
-                <div class="bg-white rounded-xl shadow-sm overflow-hidden flex flex-col justify-between">
-                    <div class="p-6">
-                        <span class="text-xs font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-2 py-1 rounded">Application Web</span>
-                        <h3 class="text-xl font-bold text-gray-900 mt-2 mb-3">AgriGest</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">Système moderne de gestion et de suivi de parcelles agricoles pour une coopérative, isolant les environnements avec Docker Compose et gérant des seeders de test complexes.</p>
-                    </div>
-                    <div class="px-6 pb-6 pt-2 border-t border-gray-50 flex justify-between items-center bg-gray-50/50">
-                        <span class="text-xs font-medium text-gray-500">Laravel 12 • Bootstrap 5 • Docker</span>
-                        <a href="https://github.com/agrigest" target="_blank" class="text-sm font-semibold text-indigo-600 hover:text-indigo-800 transition">GitHub &rarr;</a>
+                <div class="col-md-6">
+                    <div class="card-project p-4">
+                        <div>
+                            <span class="badge bg-warning text-dark mb-2">Application Web</span>
+                            <h3 class="h4 fw-bold text-dark mb-3">AgriGest</h3>
+                            <p class="text-muted small lh-base">Système moderne de gestion et de suivi de parcelles agricoles pour une coopérative, isolant les environnements avec Docker Compose et gérant des seeders de test complexes.</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-top d-flex justify-content-between align-items-center">
+                            <span class="text-muted small">Laravel 12 • Bootstrap 5 • Docker</span>
+                            <a href="https://github.com/agrigest" target="_blank" class="text-indigo fw-bold text-decoration-none">GitHub &rarr;</a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Projet 4 -->
-                <div class="bg-white rounded-xl shadow-sm overflow-hidden flex flex-col justify-between">
-                    <div class="p-6">
-                        <span class="text-xs font-bold uppercase tracking-wider text-purple-600 bg-purple-50 px-2 py-1 rounded">Application Web</span>
-                        <h3 class="text-xl font-bold text-gray-900 mt-2 mb-3">CoRide</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">Plateforme de covoiturage dynamique avec gestion avancée des transitions d'états pour sécuriser et suivre le statut des trajets et des réservations en temps réel.</p>
-                    </div>
-                    <div class="px-6 pb-6 pt-2 border-t border-gray-50 flex justify-between items-center bg-gray-50/50">
-                        <span class="text-xs font-medium text-gray-500">Laravel • Eloquent ORM • Git</span>
-                        <a href="https://github.com" target="_blank" class="text-sm font-semibold text-indigo-600 hover:text-indigo-800 transition">GitHub &rarr;</a>
+                <div class="col-md-6">
+                    <div class="card-project p-4">
+                        <div>
+                            <span class="badge bg-purple text-white mb-2" style="background-color: #6f42c1;">Application Web</span>
+                            <h3 class="h4 fw-bold text-dark mb-3">CoRide</h3>
+                            <p class="text-muted small lh-base">Plateforme de covoiturage dynamique avec gestion avancée des transitions d'états pour sécuriser et suivre le statut des trajets et des réservations en temps réel.</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-top d-flex justify-content-between align-items-center">
+                            <span class="text-muted small">Laravel • Eloquent ORM • Git</span>
+                            <a href="https://github.com" target="_blank" class="text-indigo fw-bold text-decoration-none">GitHub &rarr;</a>
+                        </div>
                     </div>
                 </div>
 
@@ -130,15 +155,7 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="max-w-4xl mx-auto px-4 py-16 text-center">
-        <h2 class="text-2xl font-bold text-gray-900 mb-4">Discutons de votre prochain projet !</h2>
-        <p class="text-gray-600 mb-8">Disponible immédiatement pour un stage de fin d'études (PFE) ou de nouvelles opportunités de collaboration.</p>
-        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 max-w-md mx-auto space-y-3 font-medium">
-            <p>📧 <a href="mailto:soukainaennaour3@gmail.com" class="text-indigo-600 hover:underline">soukainaennaour3@gmail.com</a></p>
-            <p>📞 <span class="text-gray-700">+212 618 971 896</span></p>
-            <p>📍 <span class="text-gray-500">Fquih Ben Salah, Maroc</span></p>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-6 text-center text-sm border-t border-gray-800">
+    <section id="contact" class="container py-5 text-center max-w-md" style="max-width: 500px;">
+        <h2 class="fw-bold text-dark mb-3">Discutons de votre prochain projet !</h2>
+        <p class="text-muted mb-4">Disponible immédiatement pour un stage de fin d'études (PFE) ou de nouvelles opportunités de collaboration.</p>
+        <div class="bg-white p-4 rounded shadow-sm border font-medium text-start">
